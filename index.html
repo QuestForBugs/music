@@ -1,16 +1,68 @@
 <html>
-  coming sooon agagagagagagaga
-
-
-
-
-
-
-
-
-
-
-
-
-  why am i dumb?
+  <head>
+    <title>Scratch Movie: Quest for Bugs: OST</title>
+    <style>
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+      .carousel-item {
+        flex: none;
+        scroll-snap-align: start;
+        width: 300px;
+        margin-right: 10px;
+        text-align: center; /* Centers content */
+      }
+      .carousel-item img {
+        width: 100%; /* Adjusts image size to fit the container */
+        height: auto; /* Keeps aspect ratio intact */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OST Carousel</h1>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="image1.jpg" alt="The Bandlands">
+        <h3>The Bandlands</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Banlands.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="image2.jpg" alt="Credits">
+        <h3>Credits</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Credits.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="image3.jpg" alt="KajKritism">
+        <h3>KajKritism</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/KajKritism.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="image4.jpg" alt="Trailer">
+        <h3>Trailer</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Trailer.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="image5.jpg" alt="Unknown-piano">
+        <h3>Unknown-piano.mp3</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Unknown-piano.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </body>
 </html>
