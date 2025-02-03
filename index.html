@@ -1,4 +1,112 @@
-This page is currently broken.</br>
-We are working on a fix, so don't worry!</br>
-;P</br>
-<img src="placeholder.png" type="png/image"></img>
+<html>
+  <head>
+    <title>Scratch Movie: Quest for Bugs: OST</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        background-color: #282c34;
+        padding: 20px;
+        margin: 0;
+        font-size: 2em;
+      }
+
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .carousel-item {
+        flex: none;
+        scroll-snap-align: start;
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .carousel-item:hover {
+        transform: scale(1.05);
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      h3 {
+        color: #333;
+        font-size: 1.2em;
+        margin-top: 10px;
+      }
+
+      audio {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #282c34;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OST Carousel</h1>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="banlands.png" alt="The Banlands">
+        <h3>The Banlands</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Banlands.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="placeholder.png" alt="Credits">
+        <h3>Credits</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Credits.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="placeholder.png" alt="KajKritism">
+        <h3>KajKritism</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/KajKritism.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="placeholder.png" alt="Trailer">
+        <h3>Trailer</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Trailer.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="carousel-item">
+        <img src="placeholder.png" alt="Unknown-piano">
+        <h3>Unknown-piano.mp3</h3>
+        <audio controls>
+          <source src="https://github.com/QuestForBugs/music/blob/main/ost/Unknown-piano.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </body>
+</html>
