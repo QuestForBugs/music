@@ -19,11 +19,12 @@
         position: relative;
         width: 80%;
         margin: auto;
-        overflow: hidden;
         max-width: 600px;
+        perspective: 1000px;
       }
       .carousel {
         display: flex;
+        transform-style: preserve-3d;
         transition: transform 0.5s ease;
       }
       .carousel-item {
@@ -34,6 +35,13 @@
         border-radius: 8px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         padding: 15px;
+        transform: scale(0.9) rotateY(-10deg);
+        opacity: 0.7;
+        transition: transform 0.5s, opacity 0.5s;
+      }
+      .carousel-item.active {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
       }
       .carousel-item img {
         width: 100%;
@@ -70,7 +78,7 @@
     <h1>OST Carousel</h1>
     <div class="carousel-container">
       <div class="carousel">
-        <div class="carousel-item">
+        <div class="carousel-item active">
           <img src="banlands.png" alt="The Banlands">
           <h3>The Banlands</h3>
           <audio controls>
@@ -119,12 +127,19 @@
 
     <script>
       const carousel = document.querySelector('.carousel');
+      const items = document.querySelectorAll('.carousel-item');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
-      const items = document.querySelectorAll('.carousel-item');
       let currentIndex = 0;
 
       function updateCarousel() {
+        items.forEach((item, index) => {
+          if (index === currentIndex) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
         carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
       }
 
@@ -137,10 +152,6 @@
         currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
         updateCarousel();
       });
-      setInterval(() => {
-        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-      }, 5000);
     </script>
   </body>
 </html>
