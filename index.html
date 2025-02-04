@@ -164,6 +164,27 @@
         updateCarousel();
       });
     </script>
+    <script>
+      const http = require('http');
+
+const server = http.createServer((req, res) => {
+  const userAgent = req.headers['user-agent'];
+
+  if (userAgent && userAgent.includes('Bytespider')) { // All one word, lowercase 's'
+    console.log("Blocked user agent:", userAgent);
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('Forbidden');
+    return;
+  }
+
+
+
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+    </script>    
     <a href="https://questforbugs.github.io">Back to homepage</a>
   </body>
 </html>
